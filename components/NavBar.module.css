@@ -1,33 +1,131 @@
+.banner_container {
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+/* that is for hide banner when leave homepage*/
+.banner_none {
+	display: none;
+}
+
+
+
+.banner_img {
+	filter: blur(0px);
+	width: 80%;
+	height: 65vh;
+}
+.banner_title {
+	font-weight: 600;
+	margin-top: 1rem;
+}
+
+.nav_fix {
+	display: none;
+}
+
+.logo_mobile{
+	padding: 0;
+	margin-top:-2rem ;
+	margin-left: 10%;
+	font-size: 5rem;
+	font-weight: 600;
+	font-family: "Bodoni MT";
+	align-self: flex-start;
+	text-transform: uppercase;
+}
 
 .navbar_nav {
-	display: flex;
-	justify-content: space-around;
+	position: absolute;
+	top:0;
 	background-color: white;
-	width: 70%;
 	list-style: none;
-	padding: 1rem;
-
+	width: 100%;
+	opacity: 0.9;
 	
 }
 
 
 .link_reset {
-	text-transform: uppercase;
 	color:black;
 	font-family: New York Small;
 	font-style: normal;
 	font-weight: bold;
 	font-size: 20px;
-	
-	
+	text-transform: uppercase;
 }
 
-.banner_img {
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-	background-image: url("https://images.unsplash.com/photo-1521650326612-126383c9c0e4?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1752&q=80");
-	width: 100vw;
-	height: 100vh;
-	position: relative;
+@media (min-width: 760px) {
+	.menu_icon {
+		display: none;
+	}
+	.logo {
+		background-color: #000000;
+		color: white;
+		width: 30%;
+		padding: 1rem;
+		transition: all 0.5s ease-out;
+	}
+	
+	.logo_passive {
+		display: none;
+	}
+	.banner_title {
+		display: none;
+	}
+
+	.navbar_nav {
+		z-index: 10;
+		float: right;
+		margin-top: -100px;
+		display: flex;
+		justify-content: space-around;
+		background-color: white;
+		width: 70%;
+		padding: 1rem;
+		position: sticky;
+	}
+
+	.nav_fix {
+		z-index: 1;
+		display: flex;
+		justify-content: space-around;
+		width: 100%;
+		list-style: none;
+		padding: 1rem;
+		position: sticky;
+		background-color: white;
+	}
+	.banner_img {
+		filter: blur(1px);
+		width: 100vw;
+		height: 100vh;
+	}
+	
+	.mobile_menu_icon {
+		display: none;
+	}
+}
+@media (max-width: 760px) {
+
+	.navbar_nav {
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.link_reset {
+		font-size: 3rem;
+	}
+
+	.logo,
+	.logo_passive {
+		display: none;
+	}
 }

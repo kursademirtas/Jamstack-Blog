@@ -17,6 +17,7 @@ export async function getStaticProps() {
 }
 
 const Home = ( {articles, categories, homepage}) => {
+  
   return (
     <Layout  categories={categories}>
       <div className="uk-section">
