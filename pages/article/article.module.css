@@ -1,0 +1,50 @@
+.article_container {
+	display: flex;
+	flex-direction: column;
+
+}
+
+
+.article_title {
+	font-size: 3rem;
+	font-weight: bold;
+	padding: 1rem;
+	text-align: center;
+	align-self: center;
+	line-height: 100%;
+	max-width: 600px;
+}
+
+
+
+.article_body {
+	font-size: 1rem;
+	padding: 1rem;
+	max-width: 650px;
+	margin: 10px auto;
+	color: #000000;
+	font-weight: 500;
+}
+
+.divider {
+	border: solid gray 1px;
+}
+
+.author_name {
+	font-size: 1.2rem;
+	margin-left: -1rem;
+	font-family: SF Pro Text;
+	font-style: normal;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.published_date {
+	margin-left: -1rem;
+	margin-top: -20px;
+	font-size: 1rem;
+	font-family: SF Pro Text;
+	font-style: normal;
+	font-weight: normal;
+
+}

@@ -1,0 +1,33 @@
+
+.navbar_nav {
+	display: flex;
+	justify-content: space-around;
+	background-color: white;
+	width: 70%;
+	list-style: none;
+	padding: 1rem;
+
+	
+}
+
+
+.link_reset {
+	text-transform: uppercase;
+	color:black;
+	font-family: New York Small;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	
+	
+}
+
+.banner_img {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	background-image: url("https://images.unsplash.com/photo-1521650326612-126383c9c0e4?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1752&q=80");
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+}
