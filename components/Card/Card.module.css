@@ -30,7 +30,23 @@
 	min-height: 120px;
 	color: #000000;
 	max-width: 300px;
+
 }
 .article_category_name {
-	display: none;
+	color: #666;
+	text-transform: uppercase;
+	padding-right: 10px;
+
+}
+
+.article_category_name::after {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	width: 3px;
+	height: 1em;
+	background-color: black;
+	opacity: .4;
+	margin: 0 5px;
+
 }

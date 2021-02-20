@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import Link from 'next/link';
-import styles from './MobileNav.module.css'
+import styles from './MobileNav.module.css';
+import Story from './Story'
 
-const MobileNav = ({ categories } ) => {
+const MobileNav = ({ categories, atHomePage, stories } ) => {
 
 	const[toggleMenu,  setToggleMenu] = useState(false);
-	
 
 	return (
 		<div className={styles.menu_container}>
@@ -16,13 +16,13 @@ const MobileNav = ({ categories } ) => {
 					<rect y="60" width="100" height="12" rx="8" ></rect>
 				</svg>
 			</div>
+			<div className={atHomePage ? styles.banner_container : styles.passive}>
 				<Link as = "/" href="/" >
 					<a className={styles.logo}>Logo</a>
 				</Link>
-				
-				<img  className={styles.banner_img} src="https://images.unsplash.com/photo-1521650326612-126383c9c0e4?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1752&q=80" />
-				<h4 className={styles.banner_title}>Nothing in the Weeping</h4>
-			
+				{atHomePage ? <Story stories={stories} /> : null}
+
+				</div>
 			<nav  >
 				<ul className={toggleMenu ? styles.nav_links_active : styles.passive}>
 					{categories.map((category) => {
@@ -32,15 +32,14 @@ const MobileNav = ({ categories } ) => {
 									<a className={styles.link_item}>{category.name}</a>
 								</Link>
 							</li>
-								)
-				})}
+								)})}
 				</ul>
 			</nav>
 		</div>
 	)
 }
 
-export default MobileNav
+export default MobileNav;
 
 
 

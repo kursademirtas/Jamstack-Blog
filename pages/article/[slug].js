@@ -8,8 +8,8 @@ import { getStrapiMedia } from '../../lib/media';
 import styles from './article.module.css'
 
 export async function getStaticPaths() {
-	const articles = await fetchAPI("/articles");
 
+	const articles = await fetchAPI("/articles");
 	return {
 		paths: articles.map((article) => ({
 			params: {
@@ -20,6 +20,8 @@ export async function getStaticPaths() {
 
 	};
 }
+
+
 
 export async function getStaticProps({ params }) {
 	const articles = await fetchAPI(
@@ -37,36 +39,31 @@ const Article = ({ article, categories})  => {
 
 	const imageUrl = getStrapiMedia(article.image);
 
-	console.log()
 
 	return(
-		<Layout categories={categories}>
+		<Layout categories={categories}  >
 			<div className={styles.article_container}> 
-				<h1 className={styles.article_title}>{article.title}</h1>
+			
 				<img src={imageUrl} className={styles.hero_img}/>
+				<h1 className={styles.article_title}>{article.title}</h1>
 				<div className={styles.article_body}>
 					<div>
 						<hr className={styles.divider} />
-						<div className="grid-small flex-left" data-uk-grid="true">
-							<div>
-								{article.author.picture && (
-									<Image 
-										image={article.author.picture}
-										style={{
-											position: "static",
-											borderRadius: "50%",
-											height:56,
-
-										}}
-									/>	
-								)}
+						<div>
+							<div className={styles.author_info_container}>
+									{article.author.picture && (
+										<Image 
+											image={article.author.picture} 
+											style={styles.author_avatar}  
+										/>)}
+								<div>
+									<p className={styles.author_name} >{article.author.name}</p>
+									<p className={styles.published_date} >
+										<Moment format="MMM Do YYYY">{article.published_at}</Moment>
+									</p>
+								</div>
 							</div>
-							<div >
-								<p className={styles.author_name} >{article.author.name}</p>
-								<p className={styles.published_date} >
-									<Moment format="MMM Do YYYY">{article.published_at}</Moment>
-								</p>
-							</div>
+						
 							<ReactMarkdown source={article.content} escapeHtml={false} />
 						</div>
 					</div>

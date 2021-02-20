@@ -1,0 +1,56 @@
+
+.footer_container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+	bottom: 0;
+	top:0;
+	border-top: 1px solid black;
+	position: relative;
+	
+}
+
+.footer_top {
+	background-color: #666666;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	opacity: 0.9;
+
+}
+
+.logo {
+
+	font-family: "f37BoltonCustom", helvetica, arial, sans-serif;
+	color: black;
+	font-weight: 600;
+	font-size: 4rem;
+
+}
+
+.icon {
+	width: 32px;
+	height: 32px;
+	margin-left: 16px;
+	
+}
+
+.contact {
+	padding: 1rem;
+}
+.footer_text {
+	color: white;
+	text-align: center;
+	font-size: 2rem;
+	width: 100%;
+	background-color: black;
+	padding: 1rem;
+}
+
+
+@media (min-width: 768px) { 
+	.logo {
+		font-size: 6rem;
+	}
+ }

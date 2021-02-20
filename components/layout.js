@@ -1,11 +1,19 @@
-import NavBar from './NavBar';
+import Navigation from './Navigation';
+import Footer from './Footer';
+import {useRouter} from 'next/router'
+
+const layout = ( { children, categories, articles }) => {
+
+	const atHomePage =  useRouter().pathname === "/";
+
+	const stories =  atHomePage ?  articles.filter(article => article.isStory) : null;
 
 
-const layout = ( {children, categories }) => {
 	return (
 		<>
-			<NavBar categories= {categories} />
-			{ children }
+			<Navigation categories= {categories} stories={stories} atHomePage={atHomePage}/>
+				{ children }
+			<Footer />
 		</>
 	)
 }

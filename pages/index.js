@@ -1,7 +1,7 @@
 import React from 'react';
 import Articles from '../components/Articles';
 import Layout from '../components/layout';
-import {fetchAPI} from '../lib/api';
+import { fetchAPI } from '../lib/api';
 
 //try useEffect;
 export async function getStaticProps() {
@@ -16,18 +16,19 @@ export async function getStaticProps() {
   };
 }
 
-const Home = ( {articles, categories, homepage}) => {
-  
+
+const Home = ( { articles, categories, homepage }) => {
+
   return (
-    <Layout  categories={categories}>
-      <div className="uk-section">
-        <div className="uk-container uk-container-large">
-          <h1>{homepage.hero.title}</h1>
-          <Articles articles={articles} />
-        </div>
+   
+    <Layout  categories={categories} articles={articles}>
+      <div className="content">
+        <h2 className="title">{homepage.hero.title}</h2>
+        <Articles articles={articles} />
       </div>
+
     </Layout>
-  )
+  );
 }
 
 

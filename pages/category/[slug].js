@@ -1,4 +1,4 @@
-import Articles from "../../components/articles";
+import Articles from "../../components/Articles";
 import { fetchAPI } from "../../lib/api";
 import Layout from "../../components/layout";
 
@@ -32,12 +32,11 @@ const Category = ({ category, categories }) => {
   
 	return (
 	  <Layout categories={categories}>
-		<div className="uk-section">
-		  <div className="uk-container uk-container-large">
-			<h1>{category.name}</h1>
+		  <div className="content">
+		  	<h2 className="title">{category.name}</h2>
 			<Articles articles={category.articles} />
 		  </div>
-		</div>
+
 	  </Layout>
 	);
   };

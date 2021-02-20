@@ -4,7 +4,6 @@
 
 }
 
-
 .article_title {
 	font-size: 3rem;
 	font-weight: bold;
@@ -14,9 +13,11 @@
 	line-height: 100%;
 	max-width: 600px;
 }
-
-
-
+.hero_img {
+	margin: 150px auto;
+	max-height: 80vh;
+	width:80%;
+}
 .article_body {
 	font-size: 1rem;
 	padding: 1rem;
@@ -30,18 +31,27 @@
 	border: solid gray 1px;
 }
 
+.author_info_container {
+	display: flex;
+	padding: 10px;
+}
+
+.author_avatar {
+	width: 64px;
+	height: 64px;
+	border-radius: 50%;
+}
 .author_name {
 	font-size: 1.2rem;
-	margin-left: -1rem;
 	font-family: SF Pro Text;
 	font-style: normal;
 	font-weight: bold;
 	text-transform: uppercase;
+	margin-left: 10px;
 }
 
 .published_date {
-	margin-left: -1rem;
-	margin-top: -20px;
+	margin-left:  12px;
 	font-size: 1rem;
 	font-family: SF Pro Text;
 	font-style: normal;
