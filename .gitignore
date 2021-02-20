@@ -117,3 +117,4 @@ build
 !.env.example
 .next
 node_modules
+backend
