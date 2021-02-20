@@ -1,4 +1,3 @@
-node_modules
 ############################
 # OS X
 ############################
@@ -46,6 +45,7 @@ $RECYCLE.BIN/
 *.jar
 *.rar
 *.tar
+*.zip
 *.com
 *.class
 *.dll
@@ -95,7 +95,6 @@ results
 node_modules
 .node_history
 
-
 ############################
 # Tests
 ############################
@@ -107,13 +106,9 @@ coverage
 # Strapi
 ############################
 
+.env
+license.txt
 exports
-.cache
+*.cache
 build
-
-# Custom
-
-.vscode
-.next
-.env.*
-!.env.example
+.strapi-updater.json
