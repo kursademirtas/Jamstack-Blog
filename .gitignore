@@ -92,7 +92,6 @@ lcov.info
 pids
 logs
 results
-node_modules
 .node_history
 
 
@@ -114,6 +113,7 @@ build
 # Custom
 
 .vscode
-.next
 .env.*
 !.env.example
+.next
+node_modules

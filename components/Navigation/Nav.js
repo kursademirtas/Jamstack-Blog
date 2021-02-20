@@ -1,9 +1,5 @@
-
 import Link from 'next/link';
 import styles from './Nav.module.css'
-
-
-import Image from '../Image'
 import Story from './Story';
 
 export const NavBar = ( {categories , fixNav, atHomePage, stories} ) => {
