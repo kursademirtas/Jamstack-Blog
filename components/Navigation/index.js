@@ -8,7 +8,6 @@ import useWindowSize from '../../hooks/useScreenSize';
 export const NavBar = ( { categories, stories,atHomePage } ) => {
 
 	const { width } = useWindowSize()
-	
 	const [fixNav, setFixNav] = useState(!atHomePage);
 
 
@@ -34,7 +33,7 @@ export const NavBar = ( { categories, stories,atHomePage } ) => {
 
 	return (
 		
-		<div>
+		<div className="navigation">
 		{ width > 768 ?	<Nav categories={ categories } fixNav={fixNav} atHomePage={atHomePage} stories={stories}/> : <MobileNav atHomePage={atHomePage} categories={ categories } stories={stories} />}
 		</div>
 	)

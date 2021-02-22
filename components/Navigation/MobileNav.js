@@ -16,15 +16,12 @@ const MobileNav = ({ categories, atHomePage, stories } ) => {
 					<rect y="60" width="100" height="12" rx="8" ></rect>
 				</svg>
 			</div>
-			<div className={atHomePage ? styles.banner_container : styles.passive}>
 				<Link as = "/" href="/" >
 					<a className={styles.logo}>Logo</a>
 				</Link>
-				{atHomePage ? <Story stories={stories} /> : null}
-
-				</div>
+				{atHomePage ? <Story stories={ stories } /> : null}
 			<nav  >
-				<ul className={toggleMenu ? styles.nav_links_active : styles.passive}>
+				<ul className={toggleMenu ? styles.nav_links_active : styles.nav_passive}>
 					{categories.map((category) => {
 						return (
 							<li onClick={() => setToggleMenu(!toggleMenu)} key={category.id} >
